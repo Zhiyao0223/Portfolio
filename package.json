@@ -15,7 +15,8 @@
     "react-typewriter-effect": "^1.1.0",
     "typewriter-effect": "^2.21.0",
     "framer-motion": "^10.16.5",
-    "@heroicons/react": "^2.0.18"
+    "@heroicons/react": "^2.0.18",
+    "@vercel/analytics": "^1.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
