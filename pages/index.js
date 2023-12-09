@@ -5,6 +5,7 @@ import Projects from '../components/Projects';
 import EmailSection from '../components/EmailSection';
 import Footer from '../components/Footer';
 import AchievementsSection from '../components/AchievementsSection';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 //Server: not found error handler
 const HeroSection = dynamic(
@@ -21,6 +22,7 @@ export default function Home() {
         <AboutMe />
         <Projects />
         <EmailSection />
+        <SpeedInsights />
         </main>
         <Footer />
     </div>
