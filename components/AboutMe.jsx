@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useTransition, useState } from "react";
+import Image from "next/image"; // Import the Image component from the appropriate library
 import TabButton from "./TabButton";
 
 //1d
@@ -48,74 +48,59 @@ const TAB_DATA = [
     ),
   },
 ];
-//1
+
+// About Me Section
 const AboutMe = () => {
-  //1b
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
-  //1a
+  // const [tab, setTab] = useState("skills");
+  // const [isPending, startTransition] = useTransition();
+  // const handleTabChange = (id) => {
+  //   startTransition(() => {
+  //     setTab(id);
+  //   });
+  // };
+
   return (
     <section className="text-white grid" id="aboutMe">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-32 py-16 xl-gap-16 items-center">
-        <div>
-          <img
-            src="/AboutMe.png"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-16 items-center">
+        <div className="w-full">
+          <Image
+            src="/about-me.jpg"
+            // src="/developer.svg"
             alt="About Me"
-            width={450}
-            height={450}
+            width={750}
+            height={600}
             style={{ borderRadius: "25px" }}
           />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h1 className="text-4xl font-bold text-white mb-4">About Me</h1>
-          <p className="text-base text-justify lg:text-lg">
-            I am currently dedicated to pursuing a degree in Artificial
-            Intelligence at APU, immersing myself in the latest advancements in
-            the field. Alongside my academic pursuits, I bring a wealth of
-            experience in fullstack development to the table. Proficient in a
-            range of technologies including Flutter, PHP, Python and more, I
-            have a solid foundation that extends from frontend to backend. My
-            expertise in developing seamless user experiences is demonstrated
-            through my work with Flutter and my proficiency in languages like
-            PHP and Java. In addition to my fullstack skills, I have delved into
-            the realm of game development using Unity and Godot Engine,
-            expanding my toolkit and diversifying my skill set. My academic
-            journey coupled with my hands-on experience reflects my commitment
-            to mastering the multifaceted landscape of artificial intelligence
-            and technology.
-          </p>
-          <div className="flex flex-row mt-8">
-            {/* 1e */}
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
+          <div className="text-justify text-lg">
+            {/* Introduction Paragraph */}
+            <p>
+              Graduated from Asia Pacific University (APU) with a
+              Bachelor&apos;s degree in <strong>Artificial Intelligence</strong>
+              , I am a passionate developer with a keen interest in creating
+              innovative solutions.
+            </p>
+            <br />
 
-            <TabButton
-              selectTab={() => handleTabChange("experiences")}
-              active={tab === "experiences"}
-            >
-              {" "}
-              Experiences{" "}
-            </TabButton>
+            {/* Proficiency Paragrpah */}
+            <p>
+              Proficient in <strong>Flutter, PHP, C#, Python</strong> and more,
+              I excel in both frontend and backend technologies. My expertise in
+              creating seamless user experiences is showcased through my work
+              with Flutter and languages like PHP and Java.
+            </p>
+            <br />
 
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {/* Game Development */}
+            <p>
+              Additionally, I have explored game development using{" "}
+              <strong>Unity and Godot Engine </strong> which further
+              diversifying my skill set. My journey reflects a commitment to
+              mastering the multifaceted landscape of artificial intelligence
+              and technology.
+            </p>
           </div>
         </div>
       </div>
