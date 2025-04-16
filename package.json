@@ -18,7 +18,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
-    "react-typewriter-effect": "^1.1.0",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
