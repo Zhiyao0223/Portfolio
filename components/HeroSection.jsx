@@ -30,6 +30,7 @@ const HeroSection = () => {
             <br />
             <span className="text-7xl">
               Looking For
+              <br />
               <TypeWritter
                 options={{
                   autoStart: true,
