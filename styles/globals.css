@@ -9,6 +9,9 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -25,6 +28,17 @@ body {
   backdrop-filter: blur(35px); /* Apply a blur effect */
 }
 
+.about-me {
+  color: #a9a9a9;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.about-me-strong {
+  color: #d3d3d3;
+  font-weight: bold;
+}
+
 /* Google web: let the scrollbar display none */
 ::-webkit-scrollbar {
   display: none;
@@ -32,6 +46,6 @@ body {
 
 /* Firefox, edge: let the scroll bar display none */
 ::-webkit-scrollbar {
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }

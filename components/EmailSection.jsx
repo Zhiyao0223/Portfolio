@@ -17,9 +17,9 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
 
-        <p className="text-[#ADB7BE] mb-4 max-w-md mt-8 text-justify">
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
+        <p className="text-[#ADB7BE] mb-4 mt-8 text-justify">
+          I&apos;m currently looking for new opportunities, my inbox is always open.<br />
+          Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
         <h4 className="text-[#ADB7BE] pb-3 mt-6">Let&apos;s get in touch!</h4>

@@ -1,12 +1,18 @@
 import React from "react";
-import TypeWritter from "typewriter-effect";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import TypewriterComponent from "./TypeWritter";
 
-const resumeLink =
-  "https://drive.google.com/file/d/1VF_or0IMFTePHYmafbvwRURyx01p4Pgr/view?usp=sharing";
+const resumeLink = "https://drive.google.com/file/d/1VF_or0IMFTePHYmafbvwRURyx01p4Pgr/view?usp=sharing";
+
+const jobTitle = [
+  "Fullstack Developer",
+  "Software Engineer",
+  "Mobile Developer",
+  "AI Engineer",
+];
 
 const HeroSection = () => {
   return (
@@ -20,35 +26,18 @@ const HeroSection = () => {
           className="col-span-1 md:col-span-8 place-self-center justify-self-start"
         >
           <h1 className="font-extrabold">
-            <span className="text-white text-8xl ">
-              Hello, I&apos;m <br />
-              <span className="text-transparent bg-clip-text sm:text-7xl md:text-8xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Ng Zhi Yao
+            <div className="mb-6">
+              <span className="text-white text-8xl ">
+                Hello, I&apos;m <br />
+                <span className="text-transparent bg-clip-text sm:text-7xl md:text-8xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                  Ng Zhi Yao
+                </span>
               </span>
-            </span>
-            <br />
-            <br />
+            </div>
             <span className="text-7xl">
               Looking For
               <br />
-              <TypeWritter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                }}
-                onInit={(typewriter) => {
-                  typewriter.typeString`<span style="color:#FF77FF">Software Engineer</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString`<span style="color:#9E7BFF">AI Engineer</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString`<span style="color:#893BFF">Fullstack Developer</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .start();
-                }}
-              ></TypeWritter>
+              <TypewriterComponent stringArr={jobTitle} />
             </span>
           </h1>
           <p className="text-gray-300 pt-8 text-base sm:text-lg mb-6 lg:text-xl">

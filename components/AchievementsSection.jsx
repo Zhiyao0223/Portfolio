@@ -1,10 +1,17 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 
 const achievementsList = [
   {
     metric: "Awards",
     value: "3+",
+  },
+  {
+    metric: "Certifications",
+    value: "10+",
+  },
+  {
+    metric: "Years of Experience",
+    value: "2+",
   },
   {
     metric: "Hackathons",
